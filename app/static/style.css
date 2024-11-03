@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#upload-form {
+    margin-bottom: 20px;
+}
+
+#upload-form input[type="file"] {
+    margin-right: 10px;
+}
+
+#imagePreview {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+#previewImg {
+    padding: 5px;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+#diagnosis {
+    font-size: 18px;
+    font-weight: bold;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico de Pneumonia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Diagnóstico de Pneumonia Automatizado</h1>
+        
+        <!-- Formulário para upload de imagem -->
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" id="fileInput" accept="image/*" required><br><br>
+            
+            <!-- Área onde a imagem selecionada será exibida -->
+            <div id="imagePreview">
+                <img id="previewImg" src="">
+            </div>
+            
+            <button type="submit">Enviar Imagem</button>
+        </form>
+
+        <!-- Resultado -->
+        <div id="result"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
