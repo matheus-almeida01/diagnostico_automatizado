@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, render_template
-from cnn import predict_image
+from cnn import diagnosis
 
 app = Flask(__name__)
 
@@ -34,9 +34,9 @@ def upload_file():
             if file and allowed_file(file.filename):
                 # Recebe o arquivo enviado pelo usuario e faz o diagnóstico
                 img_bytes = file.read()
-                diagnosis = predict_image(img_bytes)
+                img_diagnosis = diagnosis(img_bytes)
                 # Retorna o diagnóstico
-                return jsonify({'diagnosis': diagnosis}), 200
+                return jsonify({'diagnosis': img_diagnosis}), 200
             
         except Exception as e:
             # Retorna a mensagem de erro

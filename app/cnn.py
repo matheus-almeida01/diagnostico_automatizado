@@ -86,7 +86,7 @@ else:
     torch.save(model, 'model.pth')
 
 # Função para fazer o diagnostico em uma nova imagem
-def predict_image(image_bytes):
+def diagnosis(image_bytes):
     # Coloca o modelo em modo de avaliação
     model.eval()  
     # Carrega a imagem de bytes e converte para RGB
